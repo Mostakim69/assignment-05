@@ -1,11 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>assignment-05</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body style="background-color: gainsboro;">
+    <nav class="bg-white p-4 m-10 flex items-center justify-between rounded-lg">
+        <div class="flex items-center space-x-4">
+          <img src="assets/logo.png" alt="Logo" class="h-10 w-10">
+          <span class="text-2xl font-bold text-gray-800">DevBoard</span>
+        </div>
+        <div class="flex items-center space-x-6">
+          <img src="assets/checkbox.png" alt="Checkbox" class="h-6 w-6">
+          <span class="text-xl font-semibold text-gray-700">23</span>
+          <img src="assets/theme-btn.png" alt="Color" id="colorChanger" class="w-6 h-6">
+        </div>
+    </nav>
     
+      <section class=" grid grid-cols-[3fr_1fr] min-h-screen p-10 gap-6">
+        <div class="bg-white p-6 rounded-lg">
+          <div class="flex gap-6 mb-10">
+            <div class="flex items-center bg-gray-100 p-6 rounded-lg shadow flex-1">
+              <img src="assets/checkbox.png" alt="Checkmark" class="w-8 h-8 mr-4">
+              <div class="flex flex-col">
+                <span class="text-lg font-semibold text-gray-800">Task Assigned</span>
+                <span class="text-2xl font-bold text-blue-600">06</span>
+              </div>
+            </div>
+      
+            <div id="discoverCard" class="flex items-center bg-blue-500 p-6 rounded-lg shadow-lg flex-[2]">
+              <img src="assets/board.png" alt="Discover" class="w-16 h-16 mr-4">
+              <span class="text-xl font-bold text-white">Discover Something </br> New Today!</span>
+            </div>
+      
+            <div class="flex items-center bg-gray-100 p-6 rounded-lg shadow flex-1">
+              <img src="assets/calender.png" alt="Logo" class="w-8 h-8 mr-4">
+              <span id="currentDate" class="text-lg font-semibold text-gray-800"></span>
+            </div>
+          </div>
+      
+          <div class="grid grid-cols-3 gap-6">
+            <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+              <p class="bg-white px-2 py-2 rounded-lg mb-4">Shop Ease</p>
+              <h2 class="text-xl font-bold mb-4">Fix Mobile Button Issue</h2>
+              <p class="p-2 rounded-lg bg-white mb-4">Debug using Chrome DevTools, check for overlapping elements...</p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="text-sm text-gray-600">Deadline:</span> </br>
+                  <span class="text-sm font-semibold">21 March 2025</span>
+                </div>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded">Completed</button>
+              </div>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+              <p class="bg-white px-2 py-2 rounded-lg mb-4">CloudSync</p>
+              <h2 class="text-xl font-bold mb-4">Add Dark Mode</h2>
+              <p class="p-2 rounded-lg bg-white mb-4">Store the user's preference in localStorage, update CSS variables..</p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="text-sm text-gray-600">Deadline:</span> </br>
+                  <span class="text-sm font-semibold">21 March 2025</span>
+                </div>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded">Completed</button>
+              </div>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+              <p class="bg-white px-2 py-2 rounded-lg mb-4">SwiftPay</p>
+              <h2 class="text-xl font-bold mb-4">Optimize  Home page</h2>
+              <p class="p-2 rounded-lg bg-white mb-4">Debug using Chrome DevTools, check for overlapping elements...</p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="text-sm text-gray-600">Deadline:</span> </br>
+                  <span class="text-sm font-semibold">21 March 2025</span>
+                </div>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded">Completed</button>
+              </div>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+              <p class="bg-white px-2 py-2 rounded-lg mb-4">Shop Ease</p>
+              <h2 class="text-xl font-bold mb-4">Fix Videos Loading Issue</h2>
+              <p class="p-2 rounded-lg bg-white mb-4">Debug using Chrome DevTools, check for overlapping elements...</p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="text-sm text-gray-600">Deadline:</span> </br>
+                  <span class="text-sm font-semibold">21 March 2025</span>
+                </div>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded">Completed</button>
+              </div>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+              <p class="bg-white px-2 py-2 rounded-lg mb-4">Meta</p>
+              <h2 class="text-xl font-bold mb-4">Add new emoji 🤲</h2>
+              <p class="p-2 rounded-lg bg-white mb-4">Debug using Chrome DevTools, check for overlapping elements...</p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="text-sm text-gray-600">Deadline:</span> </br>
+                  <span class="text-sm font-semibold">21 March 2025</span>
+                </div>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded">Completed</button>
+              </div>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+              <p class="bg-white px-2 py-2 rounded-lg mb-4">Google LLC</p>
+              <h2 class="text-xl font-bold mb-4">Integrate OpenAI API </h2>
+              <p class="p-2 rounded-lg bg-white mb-4">Debug using Chrome DevTools, check for overlapping elements...</p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="text-sm text-gray-600">Deadline:</span> </br>
+                  <span class="text-sm font-semibold">21 March 2025</span>
+                </div>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded">Completed</button>
+              </div>
+            </div>           
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-4 h-fit sticky top-10">
+          <div class="flex items-center justify-center border-b pb-2 mb-4">
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-gray-700">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2" />
+                <circle cx="12" cy="12" r="9" />
+              </svg>
+              <h2 class="text-lg font-semibold text-gray-700">Activity Log</h2>
+            </div>
+          </div>
+      
+          <div class="mb-4 flex justify-center">
+            <button class="bg-blue-600 text-white text-sm px-4 py-1 rounded-lg hover:bg-blue-700">Clear History</button>
+          </div>
+          <div class="space-y-2">
+          </div>
+      </section>
+
+
+<script>
+
+  const completeButtons = document.querySelectorAll('.bg-blue-500');
+  const taskAssignedElement = document.querySelector('.text-2xl.font-bold.text-blue-600');
+  const navbarTaskCount = document.querySelector('.text-xl.font-semibold.text-gray-700');
+  const activityLog = document.querySelector('.space-y-2');
+  const clearHistoryButton = document.querySelector('.bg-blue-600');
+
+  let taskCount = parseInt(taskAssignedElement.textContent);
+  let navbarCount = parseInt(navbarTaskCount.textContent);
+
+  completeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+        if (event.target.closest("#discoverCard")) return;
+        alert('Task Completed!\nYou have successfully completed the task. Press OK to continue.');
+        button.disabled = true;
+        button.textContent = "Completed";
+        button.classList.remove("bg-blue-500");
+        button.classList.add("bg-gray-400", "cursor-not-allowed");
+        taskCount--;
+        taskAssignedElement.textContent = taskCount;
+        navbarCount++;
+        navbarTaskCount.textContent = navbarCount;
+
+        if (taskCount === 0) {
+            setTimeout(() => {
+                alert('Congratulations! 🥰🥰 Yes,, You have successfully completed all tasks!');
+            }, 100);
+      }
+
+
+        const currentTime = new Date().toLocaleTimeString('en-US', { hour12: false });
+        const taskTitle = button.closest('.bg-gray-50').querySelector('h2').textContent;
+        const logEntry = document.createElement('div');
+        logEntry.className = "bg-gray-100 p-2 rounded-lg text-sm text-gray-700";
+        logEntry.textContent = `You have completed the task "${taskTitle}" at ${currentTime}`;
+        activityLog.prepend(logEntry);
+    });
+});
+
+    clearHistoryButton.addEventListener('click', () => {
+    activityLog.innerHTML = "";
+});
+
+
+  
+
+  const colorChanger = document.getElementById('colorChanger');
+
+  function getRandomRGB() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r},${g},${b})`;
+  }
+
+    colorChanger.addEventListener('click', (event) => {
+    document.body.style.backgroundColor = getRandomRGB();
+    event.stopPropagation();
+  });
+        const discoverCard = document.getElementById('discoverCard');
+        discoverCard.addEventListener('click', () => {
+          window.location.href = 'question.html'; 
+        });
+
+        // challenge part date
+    function formatCurrentDate() {
+    const today = new Date();
+    const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
+    return today.toLocaleDateString('en-US', options);
+  }
+    const currentDateElement = document.getElementById('currentDate');
+    currentDateElement.textContent = formatCurrentDate();
+</script>
+      
 </body>
 </html>
